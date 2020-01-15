@@ -13,7 +13,7 @@ jobs:
       with:
         markdown_dir: doc
         output_dir: pdfs
-    - uses: actions/upload-artifact@v1
-      with:
-        name: platform-architecture-docs
-        path: tmp
+#    - uses: actions/upload-artifact@v1
+#      with:
+#        name: platform-architecture-docs
+#        path: tmp
