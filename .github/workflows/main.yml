@@ -12,5 +12,5 @@ jobs:
       if: github.ref == 'refs/heads/master'
     - uses: actions/download-artifact@v1
       with:
-        name: DocPDFBuild
+        name: platform-architecture-docs
         path: pdfs
