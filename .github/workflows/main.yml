@@ -12,5 +12,5 @@ jobs:
       if: github.ref == 'refs/heads/master'
     - uses: actions/download-artifact@v1
       with:
-        name: pdf-docs
+        name: platform-architecture-docs
         path: tmp
