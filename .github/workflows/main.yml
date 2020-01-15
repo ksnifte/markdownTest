@@ -1,2 +1,18 @@
-- name: Create PDF
-  uses: mkrakowitzer/actions-makepdfs@1.1
+name: Create Documentation PDFs
+on:
+  schedule:
+    - cron: 0 6 * * *
+
+jobs:
+  makepdfs:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: mkrakowitzer/actions-makepdfs@master
+      if: github.ref == 'refs/heads/master'
+    - uses: actions/upload-artifact@v1
+      with:
+        name: platform-architecture-docs
+        path: tmp
+        markdown_dir: /md
+        output_dir: /pdfs
