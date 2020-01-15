@@ -12,5 +12,7 @@ jobs:
       if: github.ref == 'refs/heads/master'
     - uses: actions/download-artifact@v1
       with:
-        name: platform-architecture-docs
+        name: pdf-docs
         path: pdfs
+
+    - run: cat pdf-docs
